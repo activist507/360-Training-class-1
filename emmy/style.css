@@ -1,3 +1,11 @@
+body {
+  background: #f4f4f2;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  font-family: sans-serif;
+}
+
 .card{
   text-align: center;
   background-color:whitesmoke;  
@@ -6,7 +14,7 @@
   height: 300px;
   border-radius:10% ;
   margin-top: 10%;
- box-shadow: 0 8px 20px; 
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08); 
 } 
 
 .avatar{
@@ -23,10 +31,11 @@
 }
 
 .btn{
-background: #6c63ff;
-color: white;
-padding: 10px;
-border-radius: 10px;
-border: none;
-font-weight: bold;
+  background: #6c63ff;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
 }
