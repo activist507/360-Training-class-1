@@ -1,0 +1,144 @@
+body {
+  background: #f4f4f2;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  font-family: sans-serif;
+}
+
+.card {
+  background: #ffffff;
+  max-width: 300px;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 2px 16px
+    rgba(0, 0, 0, 0.08);
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #5352b0;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 0 4px;
+  color: #1a1a1a;
+}
+
+.role {
+  color: #888888;
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+
+.bio {
+  font-size: 14px;
+  color: #444444;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #5352b0;
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn2 {
+  display: inline-block;
+  background: #5352b0;
+  color: white;
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+.btn:hover {
+  background: #3c3a8a;
+}
+
+.btn:active {
+  background: #3a8a3e;
+}
+
+
+/* This is the first type of Descendent selector */
+/* .card span {
+  font-size: 45px;
+} */
+
+/* This is the second type of Descendent selector */
+/* .card > p {
+  font-size: 36px;
+} */
+
+/* Pseudo-Class */
+/* Type 1: User Action States
+  - :hover == Applies styles when a pointer hovers over an element
+  - :active == Matches while an element is being clicked or activated.
+  - :focus  == Targets elements that currently have keyboard focus or text input
+*/
+.field {
+  border: 2px solid green;
+}
+.field:focus {
+  border: 2px solid red;
+}
+
+/* Type 2: Form Verification & Validation
+  - :checked: Targets radio buttons or checkboxes that are selected.
+  - :disabled: Styles form controls that are turned off.
+  - :invalid: Highlights inputs failing validation (like an incorrect email
+*/
+
+.sex:checked {
+  accent-color: green;
+}
+
+input[type="text"]:disabled {
+  border: 2px solid red;
+  background-color: blue;
+}
+
+input[type="email"]:invalid {
+  border: 1px solid red;
+}
+
+/* input[class="field1"] {
+  background-color: cornflowerblue;
+} */
+
+/* Type 3:Structural & DOM Positioning */
+/* 
+  - :first-child: Matches the very first element inside a parent container.
+  - :last-child: Matches the final element inside a parent container.
+  - :nth-child(n): Targets elements by numerical index, formulas (e.g., 3n+1), or keywords like even/odd 
+*/
+li:first-child {
+  color: aqua;
+}
+
+li:last-child {
+  font-size: 35px;
+}
+
+li:nth-child(even){
+  color: red;
+}
