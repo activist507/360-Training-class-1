@@ -6,7 +6,7 @@ body {
   font-family: sans-serif;
 }
 
-.card{
+div.card{
   text-align: center;
   background-color:whitesmoke;  
   width: 500px;
@@ -38,4 +38,12 @@ body {
   border: none;
   font-weight: bold;
   text-decoration: none;
+}
+.card>p{
+  font-size: larger;
+  color: black;
+}
+.card>h1{
+  font-style: italic;
+  color: aqua;
 }
