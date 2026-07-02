@@ -6,6 +6,7 @@
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+/* Index page */
 body {
   background: #f4f4f2;
   display: flex;
@@ -197,4 +198,24 @@ a[href="/link2"] + p::after {
 
 a[href="/link2"] + p::selection {
   background-color: green;
+}
+
+
+/* Page1 */
+.first-paragraph {
+  /* font-size: 2em; */
+  font-size: clamp( 1rem, 2.5vw, 1.5rem);
+  font-style: oblique;
+  /* word-spacing: 0.5em; */
+  text-align: justify;
+  text-indent: 2em;
+}
+
+.first-paragraph::first-line {
+ text-decoration: none;
+ text-transform: lowercase;
+}
+
+.first a {
+  text-decoration: none;
 }

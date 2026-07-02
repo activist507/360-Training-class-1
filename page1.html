@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="first">
+    <p class="first-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur, 
+      architecto excepturi labore, eligendi deserunt cupiditate iusto ut soluta eos culpa quibusdam. 
+      Tempora, fugit veniam quos libero fugiat architecto autem!
+    </p>
+    <a href="#">Click Here</a>
+  </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+//          
+//          
+//          METHOD OF ADDING STYLE TO AN HTML FILE
+//
+-->
+
+  <!-- 1. External — link a .css file in <head> -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+  <!-- 2. Internal — <style> block inside <head> -->
+    <!-- <style>
+      body { background: #fff; }
+    </style> -->
+
+  <!-- 3. Inline — style attribute on any element -->
+    <!-- <p style="color: red;">Hello</p> -->
+
+
+
+
+    
+<!-- 
+//          
+//          
+//          ANATOMY OF A CSS RULE
+//
+-->
+
+  <!-- 
+    h1 {               /* ← selector: which element to style */
+      color: #7c6af7;   /* ← property: what to change */
+      font-size: 2rem; /* ← value: how to change it */
+    } 
+  -->
+
+
+
+
+
+
+<!-- 
+//          CSS SELECTOR
+//          
+//          Selectors tell CSS which elements to target. 
+//          Mastering them lets you style anything precisely — without adding extra classes everywhere.
+//
+-->
+
+<!-- 
+    1 - Element:                        All matching tags                             e.g `p { }`
+    2 - Class:                          Elements with that class                      e.g `.card { }`
+    3 - ID:                             One unique element                            e.g `#header { }`
+    4 - Descendant:                     Nested children                               e.g `nav a { }`
+    5 - Pseudo-class:                   State or position                             e.g `a:hover { }`
+    6 - Attribute:                      Specific attribute value                      e.g `input[type="email"] { }`
+    7 - Adjacent sibling:               immediately after                             e.g `h1 + p`
+    8 - General sibling:                any after                                     e.g `h1 ~ p`
+    9 - Universal:                      Matches every element                         e.g `*  { } `
+    10 - Pseudo-elements 
+        - p::first-line                 First line of text
+        - p::first-letter               First letter
+        - div::before                   Inserts content before
+        - div::after                    Inserts content after
+        - ::selection                   User-highlighted text
+        - ::placeholder                 Input placeholder text
+    11 - Grouping:                      Same styles applied to multiple selectors      e.g `h1, h2, h3 { }`
+    12 - Chaining:                      Multiple conditions on the same element        
+          e.g `p.intro` : A <p> that also has class "intro"
+          e.g `input[required]` : An input that has the required attribute
+          e.g `a:hover::after` : Combine pseudo-class + pseudo-element 
+-->
+
+
+
+
+
+<!-- 
+//          VARIABLES & COLORS
+//          
+//          Define values once, use them everywhere.
+//          
+//
+-->
+    <!-- 
+      /* DECLARATION */
+      :root {
+        --color-primary: #7c6af7;
+        --color-text: #1a1a2e;
+        --space-md: 16px;
+        --radius: 8px;
+      }
+
+      /* USAGE */
+      .card {
+        color: var(--color-text);
+        padding: var(--space-md);
+        border-radius: var(--radius);
+        border: 2px solid var(--color-primary);
+      }
+    -->
+
+    <!--
+      /* Colors: There are four formats of assigning colors */ 
+      1 - Named: By mentioning the name of the color e.g color: tomato;
+      2 - Hex: Using the Hex code to assign colors e.g color: #7c6af7; ( Which is purple )
+      3 - RGB: Using the Red,Green, Blue combination format e.g color: rgb( 34, 211, 238 ); 
+      4 - HSL: e.g color: hsl( 320, 90%, 60% ) ;
+     
+    -->
+
+
+
+
+
+
+<!-- 
+//          
+//          
+//         TYPOGRAPHY
+//          
+//
+-->
+
+  <!-- /* Font Properties */ 
+    1 - FONT-FAMILY: Sets the typeface, always include fallbacks
+        e.g font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    
+    2 - FONT-SIZE: Sets the size of the text.
+        e.g 
+          font-size: 1rem;      /* relative to root (usually 16px) */
+          font-size: 1.25em;    /* relative to parent element */
+          font-size: clamp(1rem, 2.5vw, 1.5rem); /* fluid/responsive */
+
+          About clamp( min, preferred, max )
+            Minimum (1rem): The smallest the text will ever get. 
+              On a standard screen where 1rem equals 16px, 
+              the text will never shrink below 16px, 
+              even on tiny phone screens
+            Preferred/Fluid (2.5vw): The ideal size the text wants to be. 
+              vw stands for viewport width. 
+              This means the text will scale to be 2.5% as wide as the user's screen. 
+              As the window gets wider, the text smoothly grows.
+            Maximum (1.5rem): The largest the text will ever get. 
+              No matter how huge the desktop monitor is, 
+              the text will cap out at 1.5rem (24px), 
+              keeping it from looking disproportionately massive.
+    3 - FONT-WEIGHT: Sets the thickness of the text. Numeric values are more precise
+        e.g 
+          font-weight: 400;  /* regular */
+          font-weight: 600;  /* semibold */
+          font-weight: 700;  /* bold */
+    4 - FONT-STYLE: This sets the format of the text.
+        e.g
+          font-style: italic | oblique | normal;
+  -->
+
+
+  <!-- /* Spacing & Rhythm */
+    1 - LINE-HEIGHT: This sets the space between two successive lines in a paragraph, Unitless values are recommended
+        e.g
+          line-height: 1.5;   /* body text — comfortable reading */
+          line-height: 1.2;   /* headings — tighter */
+    2 - LETTER-SPACING: This sets the space between letters.  Use `em` so it scales with font size
+        e.g 
+          letter-spacing: 0.05em;   /* slightly open */
+          letter-spacing: -0.02em;  /* tight (good for large headings) */
+    3 - WORD-SPACING: This controls the space between words.
+        e.g 
+          word-spacing: 0.1em;
+  -->
+
+  <!-- /* Text Layout */ 
+    1 - TEXT-ALIGN: This gives orientation to the text content with respect to the parent.
+      e.g 
+        text-align: left | center | right | justify;
+    2 - TEXT-INDENT: First-line indent, common in print-style layouts.
+      e.g 
+        text-indent: 2em;
+    3 - MAX-WIDTH: for readability, The golden rule: keep lines between 60–75 characters:
+      e.g
+        p { max-width: 65ch; }
+    4 - TEXT-DECORATION: This gives decoration to the text.
+      e.g
+        text-decoration: underline | line-through | none;
+        text-decoration: underline dotted #888;
+    5 - TEXT-TRANSFORM: This controls the CAPs Lock function of the text
+      e.g 
+        text-transform: uppercase | lowercase | capitalize; 
+  -->
+
+
+
+
+<!-- 
+//          CSS POSITION
+//          
+//         
+//        The position property in CSS controls how an element is placed in the document 
+//        and how it responds to the top, right, bottom, left, and z-index properties.
+//          
+//
+-->
+
+  <!-- /* VALUES */ -->
+
+  <!--  static (default): Every element starts here. The element follows normal document flow.
+    top, left, right, bottom, z-index have no effect.
+    No offset, no special stacking behavior.
+    e.g
+      .box {
+        position: static;
+      }
+  -->
+
+  <!-- relative: The element stays in normal flow, but you can nudge it using offsets — relative to its own original position.
+    Space is still reserved in the layout where the element would have been (it just visually shifts).
+    Establishes a positioning context for absolutely positioned children.
+    e.g
+      .box {
+        position: relative;
+        top: 10px;   /* moves down 10px from where it normally sits */
+        left: 20px;  /* moves right 20px */
+      }
+  -->
+
+  <!-- absolute: The element is removed from normal flow (doesn't take up space) 
+        and positioned relative to the nearest positioned ancestor (any ancestor with position other than static). 
+        If none exists, it's positioned relative to the initial containing block (usually the <html> element / viewport).
+      e.g
+      .parent {
+        position: relative; /* becomes the reference point */
+      }
+      .child {
+        position: absolute;
+        top: 0;
+        right: 0; /* pinned to top-right of .parent */
+      }
+      Common use case: badges, tooltips, dropdown menus, modal close buttons.       
+  -->
+
+  <!-- fixed: Removed from normal flow and positioned relative to the viewport — it stays in place even when the page scrolls.
+      e.g 
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    Common use case: sticky headers/navbars, "back to top" buttons, chat widgets.
+  -->
+
+  <!-- sticky: A hybrid of relative and fixed. 
+    The element behaves like relative until it crosses a defined threshold during scroll, 
+    then "sticks" like fixed within its parent container.
+    e.g
+    .header {
+      position: sticky;
+      top: 0; /* sticks once it reaches 0px from top of viewport */
+    }
+      Important constraints:
+      Requires at least one offset (top, bottom, etc.) to work.
+      Sticks within the bounds of its parent — once the parent scrolls out of view, the sticky element scrolls away too.
+      Doesn't work if a parent has overflow: hidden, scroll, or auto in some cases (clipping issues).
+
+      Common use case: sticky table headers, section labels in a long list, sidebar navigation.
+  -->
+
+  <!-- /* NOTE */
+    Positioning Context ("Containing Block")
+    An absolute element looks upward through its ancestors 
+    for the nearest one with position: relative | absolute | fixed | sticky. 
+    If none is found, it falls back to the <html> root.
+  -->
