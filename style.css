@@ -1,0 +1,53 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card{
+    text-align: center;
+    background-color: wheat;
+    width:500px ;
+    margin: auto;
+    height: 300px ;
+    border-radius: 10%;
+    margin-top: 10%;
+    box-shadow: 4px 12px rgba(rgb(190, 138, 138), green, rgb(78, 78, 178), alpha);
+}
+
+.avatar{
+    width: 75px;
+    height: 76px;
+    background-color:white ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    margin: auto;
+}
+a{
+    color: white;
+}
+.name{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom:4px ;
+    color: rgb(139, 77, 120);
+}
+.role{
+    font-size: 28px;
+    color: lightgray;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+.btn{
+display: inline-block;
+background-color:blue ;
+color: white;
+padding: 10px;
+border-radius: 30px;
+text-decoration: none;
+font-weight: 500;
+font-size: 15px;
+}
+.btn{
+    background-color: darkgray;
+}

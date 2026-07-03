@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Assignment: Selectors, Variables, Typography & Position</title>
+
+<style>
+  /* ============================================================
+     STUDENT WORK ZONE
+     ------------------------------------------------------------
+     Write ALL of your CSS below this line, inside this <style>
+     tag. Do not edit the HTML structure below unless a task
+     explicitly tells you to (e.g. adding attributes for
+     Part 1, Task 6).
+
+     Read the instructions above each section in the HTML body
+     before styling that section.
+     ============================================================ */
+
+
+
+  /* ---- Part 1: Selectors ---- */
+
+
+
+  /* ---- Part 2: Variables & Colors ---- */
+
+
+
+  /* ---- Part 3: Typography ---- */
+
+
+
+  /* ---- Part 4: Position ---- */
+
+
+
+</style>
+</head>
+<body>
+
+<header class="assignment-header">
+  <h1>CSS Practice: Selectors, Variables, Typography &amp; Position</h1>
+  <p>Follow the instructions in each section below. Write all your CSS in the
+  <code>&lt;style&gt;</code> tag at the top of this file. Do not change any
+  HTML unless a task tells you to. Each section tells you exactly what to
+  target and what effect to produce — the visual result is up to you, as
+  long as the requirement is met.</p>
+</header>
+
+<main>
+
+  <!-- ======================================================
+       PART 1 — SELECTORS
+  ======================================================= -->
+  <section id="part1" class="assignment-section">
+    <h2>Part 1 — Selectors</h2>
+    <p class="instructions">Complete each task using the exact selector type named in brackets. Don't use a class where the task calls for an element, ID, or attribute selector, etc.</p>
+
+    <ol class="task-list">
+      <li>[Element] Give every <code>&lt;p&gt;</code> in this section a different text color than the default.</li>
+      <li>[Class] Style <code>.highlight-card</code> with a background color, padding, and a border-radius.</li>
+      <li>[ID] Style <code>#feature-box</code> with a distinct border.</li>
+      <li>[Descendant] Style only the <code>&lt;a&gt;</code> tags that are inside <code>nav.site-nav</code> (not links elsewhere on the page).</li>
+      <li>[Pseudo-class: hover] Make links in <code>.link-list</code> change color when hovered.</li>
+      <li>[Pseudo-class: nth-child] In <code>.zebra-list</code>, give every even <code>&lt;li&gt;</code> a different background color than the odd ones.</li>
+      <li>[Attribute] Style every <code>input[required]</code> in the form with a colored left border.</li>
+      <li>[Attribute] Style <code>input[type="email"]</code> differently from other inputs in the form.</li>
+      <li>[Adjacent sibling] Style the <code>&lt;p&gt;</code> that comes immediately after <code>h3.sibling-target</code> — no other paragraph in that section should be affected.</li>
+      <li>[General sibling] Style every <code>&lt;p&gt;</code> that comes after <code>h3.sibling-target</code> (not just the first one) using <code>~</code> — compare the visual result to Task 9.</li>
+      <li>[Universal] Add <code>box-sizing: border-box;</code> to every element on the page using <code>*</code>.</li>
+      <li>[Pseudo-element: ::before / ::after] Add decorative content before or after each <code>.tag</code> element (e.g. a symbol or bracket) without editing the HTML.</li>
+      <li>[Pseudo-element: ::first-letter] Give the first letter of <code>.drop-cap</code> a noticeably larger font size.</li>
+      <li>[Pseudo-element: ::selection] Change the highlight color used when a user selects/drags over text on the page.</li>
+      <li>[Grouping] Write one rule that applies the same heading style to <code>h1, h2, h3</code> at once.</li>
+      <li>[Chaining] Style <code>p.intro</code> (a paragraph that also has the class "intro") differently from other paragraphs.</li>
+    </ol>
+
+    <nav class="site-nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div id="feature-box">
+      <p class="intro">This is the introductory paragraph — target it with <code>p.intro</code>.</p>
+      <p>This is a regular paragraph for comparison.</p>
+    </div>
+
+    <div class="highlight-card">
+      <p>This card should be styled using the <code>.highlight-card</code> class selector.</p>
+    </div>
+
+    <ul class="link-list">
+      <li><a href="#">Practice link one</a></li>
+      <li><a href="#">Practice link two</a></li>
+      <li><a href="#">Practice link three</a></li>
+    </ul>
+
+    <ul class="zebra-list">
+      <li>Row one</li>
+      <li>Row two</li>
+      <li>Row three</li>
+      <li>Row four</li>
+      <li>Row five</li>
+    </ul>
+
+    <form class="practice-form">
+      <label>Name: <input type="text" required></label><br>
+      <label>Email: <input type="email" required></label><br>
+      <label>Newsletter (optional): <input type="text"></label>
+    </form>
+
+    <div class="sibling-demo">
+      <h3 class="sibling-target">Sibling Selector Demo</h3>
+      <p>Paragraph A — immediately after the heading.</p>
+      <p>Paragraph B — comes later.</p>
+      <p>Paragraph C — comes even later.</p>
+    </div>
+
+    <div class="tag-list">
+      <span class="tag">css</span>
+      <span class="tag">html</span>
+      <span class="tag">selectors</span>
+    </div>
+
+    <p class="drop-cap">Style the first letter of this paragraph to be much larger than the rest, like a classic drop cap in a printed book.</p>
+  </section>
+
+  <!-- ======================================================
+       PART 2 — VARIABLES & COLORS
+  ======================================================= -->
+  <section id="part2" class="assignment-section">
+    <h2>Part 2 — Variables &amp; Colors</h2>
+    <p class="instructions">Complete each task below.</p>
+
+    <ol class="task-list">
+      <li>On <code>:root</code>, declare at least four custom properties: a primary color, a secondary color, a spacing value, and a border-radius value.</li>
+      <li>Style <code>.var-card</code> using only <code>var(--...)</code> references to the variables you declared — no hard-coded values for color, padding, or border-radius inside this rule.</li>
+      <li>Style <code>.color-named</code> using a named color (e.g. <code>tomato</code>).</li>
+      <li>Style <code>.color-hex</code> using a hex color code.</li>
+      <li>Style <code>.color-rgb</code> using the <code>rgb()</code> format.</li>
+      <li>Style <code>.color-hsl</code> using the <code>hsl()</code> format.</li>
+    </ol>
+
+    <div class="var-card">This card must be styled entirely with CSS variables.</div>
+
+    <div class="color-swatches">
+      <div class="color-named">Named</div>
+      <div class="color-hex">Hex</div>
+      <div class="color-rgb">RGB</div>
+      <div class="color-hsl">HSL</div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PART 3 — TYPOGRAPHY
+  ======================================================= -->
+  <section id="part3" class="assignment-section">
+    <h2>Part 3 — Typography</h2>
+    <p class="instructions">Complete each task below.</p>
+
+    <ol class="task-list">
+      <li>[font-family] Give <code>.type-family</code> a font stack with at least two fallback fonts.</li>
+      <li>[font-size + clamp] Give <code>.type-fluid</code> a font-size using <code>clamp(min, preferred, max)</code> so it scales with the viewport.</li>
+      <li>[font-weight] Give <code>.type-weight</code> a numeric font-weight (not "bold").</li>
+      <li>[font-style] Make <code>.type-style</code> italic.</li>
+      <li>[line-height] Set a comfortable unitless line-height (around 1.5) on <code>.type-body</code>.</li>
+      <li>[line-height] Set a tighter unitless line-height (around 1.1–1.2) on <code>.type-heading</code>.</li>
+      <li>[letter-spacing] Give <code>.type-open</code> slightly increased letter-spacing using <code>em</code>.</li>
+      <li>[letter-spacing] Give <code>.type-tight</code> slightly negative letter-spacing using <code>em</code>.</li>
+      <li>[word-spacing] Increase the word-spacing on <code>.type-wordspace</code>.</li>
+      <li>[text-align] Center <code>.type-center</code>.</li>
+      <li>[text-indent] Indent the first line of <code>.type-indent</code>.</li>
+      <li>[max-width / ch] Constrain <code>.type-readable</code> to a readable line length using <code>ch</code> units.</li>
+      <li>[text-decoration] Give <code>.type-decoration</code> a non-default text-decoration (e.g. a dotted underline).</li>
+      <li>[text-transform] Make <code>.type-caps</code> render in uppercase without changing the HTML text.</li>
+    </ol>
+
+    <p class="type-family">This text needs a font-family stack with fallbacks.</p>
+    <p class="type-fluid">This text should resize fluidly with the browser window (try resizing your browser).</p>
+    <p class="type-weight">This text needs a specific numeric font-weight.</p>
+    <p class="type-style">This text should be italic.</p>
+    <p class="type-body">This paragraph represents body text and needs comfortable, readable line-height. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h3 class="type-heading">This heading needs tighter line-height</h3>
+    <p class="type-open">This text needs slightly increased letter-spacing.</p>
+    <p class="type-tight">This text needs slightly negative letter-spacing.</p>
+    <p class="type-wordspace">This text needs increased word spacing between each word.</p>
+    <p class="type-center">This text should be centered.</p>
+    <p class="type-indent">This paragraph needs its first line indented, like a print book paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    <p class="type-readable">This paragraph should be constrained to a readable line length of roughly 60–75 characters per line, no matter how wide the page is. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p class="type-decoration">This text needs a non-default text-decoration style.</p>
+    <p class="type-caps">this text should display in uppercase</p>
+  </section>
+
+  <!-- ======================================================
+       PART 4 — POSITION
+  ======================================================= -->
+  <section id="part4" class="assignment-section">
+    <h2>Part 4 — Position</h2>
+    <p class="instructions">Complete each task below.</p>
+
+    <ol class="task-list">
+      <li>[static] Confirm/set <code>.pos-static</code> to <code>position: static</code> and note that top/left have no effect on it (leave it in normal flow).</li>
+      <li>[relative] Give <code>.pos-relative</code> <code>position: relative</code> and nudge it using <code>top</code> and <code>left</code> so it shifts visually but still reserves its original space in the layout.</li>
+      <li>[relative as context] Give <code>.pos-context</code> <code>position: relative</code> so it can act as a positioning container (you'll build on this in a future assignment with absolutely positioned children).</li>
+    </ol>
+
+    <div class="position-demo">
+      <div class="pos-static">Static box (default flow)</div>
+      <div class="pos-relative">Relative box (nudge me with top/left)</div>
+      <div class="pos-context">Relative context box</div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

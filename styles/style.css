@@ -1,3 +1,12 @@
+:root {
+  --pixel-64: 50px;
+  --bg-main-color: cornflowerblue; /* Declare the variable*/
+  /* --bg-main-color: #5352b0; */
+}
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Index page */
 body {
   background: #f4f4f2;
   display: flex;
@@ -18,10 +27,10 @@ body {
 }
 
 .avatar {
-  width: 64px;
-  height: 64px;
+  width: var(--pixel-64);
+  height: var(--pixel-64);
   border-radius: 50%;
-  background: #5352b0;
+  background: var(--bg-main-color); /* Using the variable */
   color: white;
   font-size: 22px;
   display: flex;
@@ -51,7 +60,7 @@ h1 {
 
 .btn {
   display: inline-block;
-  background: #5352b0;
+  background: var(--bg-main-color); /* Using the variable */
   color: white;
   text-decoration: none;
   padding: 8px 20px;
@@ -61,7 +70,7 @@ h1 {
 
 .btn2 {
   display: inline-block;
-  background: #5352b0;
+  background: var(--bg-main-color);   /* Using the variable */
   color: white;
   text-decoration: none;
   padding: 16px 40px;
@@ -142,4 +151,72 @@ li:last-child {
 
 li:nth-child(even){
   color: red;
+}
+
+.bio::first-letter {
+  font-size: 48px;
+  color: cornflowerblue;
+}
+
+.bio::first-line {
+  color: blue;
+  line-height: 2px;
+  font-style: italic;
+}
+
+.bio::after {
+  content: "=>";
+  display: inline;
+}
+
+/* a[href="/link1"] {
+  text-decoration: none;
+  color: red;
+  font-size: 20px;
+} */
+
+/* a + p {
+  font-size: 58px;
+} */
+
+/* a[href="/link2"] + p::first-line {
+  color: blue;
+  font-size: 18px;
+  font-style: italic;
+}
+
+a[href="/link2"] + p::first-letter {
+  color: red;
+  font-size: 45px;
+  font-style: italic;
+  font-weight: bold;
+} */
+
+a[href="/link2"] + p::after {
+  content: "←";
+  color: Red;
+}
+
+a[href="/link2"] + p::selection {
+  background-color: green;
+}
+
+
+/* Page1 */
+.first-paragraph {
+  /* font-size: 2em; */
+  font-size: clamp( 1rem, 2.5vw, 1.5rem);
+  font-style: oblique;
+  /* word-spacing: 0.5em; */
+  text-align: justify;
+  text-indent: 2em;
+}
+
+.first-paragraph::first-line {
+ text-decoration: none;
+ text-transform: lowercase;
+}
+
+.first a {
+  text-decoration: none;
 }
