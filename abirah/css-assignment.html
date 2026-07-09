@@ -29,13 +29,13 @@
   padding: 10px;
   border-radius: 10px;
 }
-div.sibling-demo > :nth-child(1) {
+div.sibling-demo > :nth-child(2) {
   color: cadetblue;
 }
-div.sibling-demo > :nth-child(2) {
+div.sibling-demo > :nth-child(3) {
   color: greenyellow;
 }
-div.sibling-demo > :nth-child(3) {
+div.sibling-demo > :nth-child(4) {
   color: pink;
 }
 .drop-cap{
@@ -44,7 +44,7 @@ div.sibling-demo > :nth-child(3) {
 #feature-box{
   border: 2px solid  black;
 }
-nav.site-nav{
+.site-nav a{
   text-decoration: none;
   color: yellow;
 
@@ -53,8 +53,20 @@ nav.site-nav{
   list-style-type: none;
   text-decoration: none;
 }
-.link-list:hover{
+.link-list a:hover{
   color: red;
+
+}
+.link-list a ::before{
+  content: "*";
+}
+.zebra-list :nth-child(odd){
+  background-color: plum;
+}
+.zebra-list :nth-child(even){
+  background-color: greenyellow;
+}
+input[required]{border-left:1px solid crimson;
 
 }
 /* ---- Part 1: Selectors ---- */
@@ -70,7 +82,6 @@ nav.site-nav{
 
 
   /* ---- Part 4: Position ---- */
-
 
 
 </style>
