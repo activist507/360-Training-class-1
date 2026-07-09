@@ -17,6 +17,7 @@
      Read the instructions above each section in the HTML body
      before styling that section.
      ============================================================ */
+/* ---- Part 1: Selectors ---- */
 .instructions{
   color: blue;
 }
@@ -69,12 +70,38 @@ div.sibling-demo > :nth-child(4) {
 input[required]{border-left:1px solid crimson;
 
 }
-/* ---- Part 1: Selectors ---- */
+input[email]{
+  border: 3px solid violet;
+}
+
 
 
 
 /* ---- Part 2: Variables & Colors ---- */
-
+:root{
+  --primary-color:blue;
+  --secondary-color:red;
+  --space-md:30px;
+  --border-radius:40px;
+}
+.var-card{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: var(--space-md);
+  border-radius: var(--border-radius);
+}
+.color-named{
+  background-color: blueviolet;
+}
+.color-hex{
+  background-color: #8a2be2;
+}
+.color-rgb{
+  background-color: rgb(138, 43, 226);
+}
+.color-hsl{
+  background-color: hsl(271.15deg, 75.93%, 52.75%);
+}
 
 
   /* ---- Part 3: Typography ---- */
