@@ -17,23 +17,151 @@
      Read the instructions above each section in the HTML body
      before styling that section.
      ============================================================ */
+/* ---- Part 1: Selectors ---- */
+.instructions{
+  color: blue;
+}
+.intro{
+  color: palevioletred;
+}
+.highlight-card{
+  color: blueviolet;
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 10px;
+}
+div.sibling-demo > :nth-child(2) {
+  color: cadetblue;
+}
+div.sibling-demo > :nth-child(3) {
+  color: greenyellow;
+}
+div.sibling-demo > :nth-child(4) {
+  color: pink;
+}
+.drop-cap{
+  color: peru;
+}
+#feature-box{
+  border: 2px solid  black;
+}
+.site-nav a{
+  text-decoration: none;
+  color: yellow;
+
+}
+.link-list{
+  list-style-type: none;
+  text-decoration: none;
+}
+.link-list a:hover{
+  color: red;
+
+}
+.link-list a ::before{
+  content: "*";
+}
+.zebra-list :nth-child(odd){
+  background-color: plum;
+}
+.zebra-list :nth-child(even){
+  background-color: greenyellow;
+}
+input[required]{border-left:1px solid crimson;
+
+}
+input[email]{
+  border: 3px solid violet;
+}
 
 
 
-  /* ---- Part 1: Selectors ---- */
 
-
-
-  /* ---- Part 2: Variables & Colors ---- */
-
+/* ---- Part 2: Variables & Colors ---- */
+:root{
+  --primary-color:blue;
+  --secondary-color:red;
+  --space-md:30px;
+  --border-radius:40px;
+}
+.var-card{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: var(--space-md);
+  border-radius: var(--border-radius);
+}
+.color-named{
+  background-color: blueviolet;
+}
+.color-hex{
+  background-color: #8a2be2;
+}
+.color-rgb{
+  background-color: rgb(138, 43, 226);
+}
+.color-hsl{
+  background-color: hsl(271.15deg, 75.93%, 52.75%);
+}
 
 
   /* ---- Part 3: Typography ---- */
-
-
+.type-family{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.type-fluid {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+.type-weight {
+  font-weight: 900;
+}
+.type-style {
+  font-style: italic;
+}
+.type-body{
+  line-height: 1.5;
+}
+.type-heading{
+  line-height: 1.1;
+}
+.type-open {
+  letter-spacing: 0.8em;
+}
+.type-tight{
+ letter-spacing: -0.07em ; 
+}
+.word-space{
+  word-spacing: 0.9em;
+}
+.text-center{
+  text-align: center;
+}
+.text-indent{
+  text-indent: 6em;
+}
+.type-readable{
+  max-width: 90cm;
+}
+.type-decoration{
+  text-decoration: underline dotted;
+}
+.type-caps{
+  text-transform: uppercase;
+}
 
   /* ---- Part 4: Position ---- */
-
+ .pos-static{
+  position: static;
+ }
+ .pos-relative{
+  position: relative;
+  top: 2px;
+  left: 40px;
+ }
+ .pos-context {
+  position: relative;
+  c
+  
+ }
 
 
 </style>
