@@ -21,19 +21,223 @@
 
 
   /* ---- Part 1: Selectors ---- */
+    * {
+        box-sizing: border-box;
+    }
+    #part1 p {
+        color: tomato;
+    }
 
+    .highlight-card {
+        background-color: aquamarine;
+        padding: 10px;
+        border-radius: 10%;
+    }
 
+    #feature-box {
+        border: 3px solid black;
+    }
 
+    .site-nav a {
+        text-decoration: none;
+        color: yellowgreen;
+    }
+
+    .link-list {
+        list-style-type: none;
+    }
+    .link-list a {
+        text-decoration: none;
+    }
+    .link-list a::before {
+        content: "*";
+        display: inline-block;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+    .link-list a:hover {
+        color: red;
+    }
+
+    .zebra-list :nth-child( odd ) {
+        background-color: blueviolet;
+    }
+
+    .zebra-list :nth-child( even ) {
+        background-color: turquoise;
+    }
+
+    .zebra-list :nth-child( 3 - 1 ) {
+        background-color: brown;
+    }
+
+    .practice-form input[required] {
+        border-left: 2px solid blue;
+    }
+
+    .practice-form input[type="email"] {
+        margin: 5px 0px;
+        border-right: 2px solid green;
+    }
+
+    h3.sibling-target + p {
+        font-size: 20px;
+    }
+
+    .sibling-demo :nth-child(3) {
+        font-style: italic;
+        font-size: 36px;
+    } 
+
+    .tag-list :nth-child(1)::before {
+        content: "#";
+    }
+
+    .tag-list :nth-child(2)::after {
+        content: "@";
+    }
+
+    .tag-list :nth-child(3)::after {
+        content: "+";
+    }
+
+    .tag-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .drop-cap::first-letter {
+        font-size: 48px;
+    }
+
+    #part1::selection {
+        color: turquoise;
+    }
+
+    #part1 h1, 
+    #part1 h2, 
+    #part1 h3 {
+        font-size: 56px;
+    }
+
+    #part1 p.intro {
+        color: aliceblue;
+    }
   /* ---- Part 2: Variables & Colors ---- */
 
+:root{
+    --primary-color: blue;
+    --secondary-color: lightblue;
+    --spacing: 20px;
+    --radius: 10px;
+}
+
+.assignment-section{
+    padding: 20px;
+}
+
+.var-card{
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing);
+    border-radius: var(--radius);
+    margin-top: 20px;
+}
+
+.color-swatches{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.color-swatches div{
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.color-named{
+    background-color: tomato;
+}
+
+.color-hex{
+    background-color: #3498db;
+}
+
+.color-rgb{
+    background-color: rgb(46, 204, 113);
+}
+
+.color-hsl{
+    background-color: hsl(280, 70%, 50%);
+}
 
 
   /* ---- Part 3: Typography ---- */
+.type-family{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+.type-fluid{
+  font-size: larger;
+}
 
+.type-weight{
+  font-weight: lighter;
+}
 
+.type-style{
+  font: italic;
+}
+
+.type-body{
+  line-height: 1.5;
+}
+
+.type-heading{
+  line-height: 1.2;
+}
+
+.type-open{
+  letter-spacing: 0.5em;
+}
+
+.type-tight{
+  letter-spacing: 0,5em;
+}
+.type-wordspace{
+  word-spacing: 0.1em;
+}
+.type-center{
+  text-align: center;
+}
+.type-indent{
+  text-indent:2em ;
+  
+}
+.type-readable{
+   max-width: 65; 
+}
+
+ .type-decoration{
+  text-decoration: underline dotted;
+ }
+
+ .type-caps{
+  text-transform: uppercase;
+
+ }
   /* ---- Part 4: Position ---- */
-
+ .pos-static{
+  position: static;
+ }
+ .pos-relative{
+  position: relative;
+  left: 10px;
+ }
+  .pos-context{
+    
+  }
 
 
 </style>
@@ -120,7 +324,7 @@
     </div>
 
     <div class="tag-list">
-      <span class="tag">css</span>
+      <span class="tag">css</span> 
       <span class="tag">html</span>
       <span class="tag">selectors</span>
     </div>
