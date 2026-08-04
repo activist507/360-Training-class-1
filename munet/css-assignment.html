@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CSS Assignment: Selectors, Variables, Typography & Position</title>
-
 <style>
   /* ============================================================
      STUDENT WORK ZONE
@@ -21,19 +20,228 @@
 
 
   /* ---- Part 1: Selectors ---- */
+   *{
+    box-sizing: border-box;
+   }
+  #part1 p{
+      color: rgb(7, 215, 136);
+    }
 
+   .highlight-card {
+       background-color: rgb(75, 43, 3);
+       padding: 12px;
+       border-radius: 50%;
+    }
 
+     #feature-box {
+        border: 3px solid black;
+     }
+
+    .site-nav a {
+       text-decoration: none;
+       color: rgb(116, 17, 17);
+     }
+
+   .link-link{
+       link-style-type: none;
+    }
+
+    .link-link a {
+       text-decoration: none;
+    }
+
+    .link-link a::before{
+       content: "*";
+       display: inline-block;
+       padding-right: 5px;
+       padding-top: 5px;
+    }
+
+    .link-link a:hover{
+        color: rgb(122, 8, 8);
+    }
+
+   .zebra-list :nth-child(odd){
+         background-color:greenyellow;
+    }
+
+   .zebra-list :nth-child(even){
+          background-color: goldenrod;
+    }
+
+   .zebra-list :nth-child(3 - 1) {
+        background-color: darkslategrey;
+    }
+
+   .practice-form input[required]{
+          border-left: 2px solid rgb(10, 10, 237);
+     }
+
+    .practice-form input[type="email"]{
+        margin: 5px 0px;
+      border-right: 2px solid rgb(11, 92, 11)(1, 92, 11);
+    }
+
+    h3.sibling-target + p {
+        font-size: 20px;
+       }
+
+   .sibling-demo :nth-child(3){
+       font-style: italic;
+       font-size: 36px;
+    }
+
+    .tag-list:nth-child(1)::before{
+      content: "@";
+    }
+
+    .tag-list:nth-child(2)::before{
+      content: "#";
+    }
+
+    .tag-list:nth-child(3)::before{
+      content: "$";
+    }
+
+    .tag-list{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drop-cap::first-letter{
+      font-size: 48px;
+    }
+
+    #part1::selection{
+      color: khaki;
+    }
+
+    #part1 h1,
+    #part1 h2,
+    #part1 h3{
+      font-size: 56px;
+    }
+
+    #part1 p.intro {
+      color: rgb(237, 216, 23);
+    }
 
   /* ---- Part 2: Variables & Colors ---- */
+     :root {
+        --color-primary: #2a7de1;
+        --color-secondary:#f39c12;
+        --space-md: 24px;
+        --border-radius: 16px;
+      }
+  
+  .var-card {
+      color: var(--color-text);
+        padding: var(--space-md);
+        border-radius: var(--radius);
+        border: 2px solid var(--color-primary);
+     }
 
+     .color-named{
+      background-color: tomatoes;
+      color: tomato;
+      padding: var(--spacing-value);
+      border-radius: var(--border-radius);
+     }
 
+     .color-hex{
+      color: #7c6af7;;
+      padding: var(--spacing-value);
+      border-radius: var(--border-radius);
+     }
+
+     .color-rgb{
+      color: rgb(243, 7, 125);
+      padding: var(--spacing-value);
+      border-radius: var(--border-radius);
+     }
+     .color-hsl{
+      color: hsl(241, 84%, 47%) ;
+      padding: var(--spacing-value);
+      border-radius: var(--border-radius);
+     }
 
   /* ---- Part 3: Typography ---- */
+     .type-family{
+       font-family: Arial, Helvetica, sans-serif;
+     }
 
+     .type-fluid{
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+     }
 
+     .type-weight{
+      font-weight: bold;
+     }
+
+     .type-style{
+      font-style: italic;
+     }
+
+     .type-body {
+      line-height: 1.5;
+     }
+
+     .type-heading {
+      line-height: 1.1;
+     }
+
+     .type-open{
+      letter-spacing: 0.05em;
+     }
+
+      .type-tight{
+      letter-spacing: -0.02em;
+     }
+
+      .type-wordspace{
+      word-spacing: 0.1em;
+     }
+
+     .type-center{
+      text-align: center;
+     }
+
+     .type-indent{
+      text-indent: 2em;
+     }
+
+     .type-readable{
+      max-width: 65ch;
+     }
+
+     .type-decoration{
+      text-decoration: underline dotted red;
+     }
+
+     .type-caps{
+      text-transform: uppercase;
+     }
 
   /* ---- Part 4: Position ---- */
+    .pos-static {
+      position: static;
+    }
 
+    .pos-relative {
+      position: relative;
+      top: 5px;
+      left: 10px;
+    }
+
+     .pos-context {
+      position: relative;
+    }
+
+    .child{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
 
 </style>
