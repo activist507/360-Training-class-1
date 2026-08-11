@@ -3,70 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Decsription" content="Training, class, html training">
   <title>Bootstrap</title>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 </head>
-<body>
-  <div class="card">
-    <div class="avatar">AJ</div>
-    <h1>Amara Johnson</h1>
-    <p class="role">Frontend Developer</p>
-    <p class="bio">I build things for the web.
-    Coffee enthusiast. Lagos-based.</p>
-    <a href="#" class="btn">View portfolio</a> <br>
-    <a href="/link1">Link One</a>
-    <a href="/link2">Link Two</a>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur, 
-      architecto excepturi labore, eligendi deserunt cupiditate iusto ut soluta eos culpa quibusdam. 
-      Tempora, fugit veniam quos libero fugiat architecto autem!
-    </p>
-    <!-- <span>This is styled using descendent selector </span> -->
-    <div>
-      <p>This is a paragraph</p>
-    </div>
-  </div>
+<body class="bg-danger">
 
-  <!-- <div class="test1">
-    <input type="text" class="field1">
-    <br>
-    <input type="text" name="" id="" class="field2" disabled>
-    <br>
-    <input type="email">
-    <br>
-    <input type="checkbox" name="sex" class="sex" value="male">
-    <label for="sex">Male</label>
-    <input type="checkbox" name="sex" class="sex" value="female">
-    <label for="sex">female</label>
-  </div>
-  <ul>
-    <li>Rice</li>
-    <li>Beans</li>
-    <li>Yam</li>
-    <li>Egg</li>
-  </ul>
-</body>
-</html>
+  <div class="container">
+    <form class="row g-3">
+      <div class="col-12">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" id="name" class="form-control">
+      </div>
+      <div class="col-12">
+        <label for="address" class="form-label">Address:</label>
+        <input type="text" id="address" class="form-control">
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div class="col-6">
+        <label for="contact" class="form-label">Contact:</label>
+        <input type="text" id="contact" class="form-control">
+      </div>
+      <div class="col-6">
+        <label for="gender" class="form-label">Gender:</label>
+        <select name="" id="gender" class="form-select">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
 
-    <div class="container">
+      <div class="col-6">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" name="" id="password" class="form-control">
+      </div>
+
+      <div class="col-6">
+        <label for="confirm-password" class="form-label">Confirm Password:</label>
+        <input type="password" name="" id="confirm-password" class="form-control">
+      </div>
+
+      <div class="col-6"></div>
+      <div class="col-6">
+        <button type="button" class="btn btn-success w-100">Submit</button>
+      </div>
+    </form>
+
+    <form class="g-2 pt-4">
+
       <div class="row">
-        <div class="col-lg-6 col-sm-12">
-          <img src="images/demo1.jpeg" alt="" class="img-fluid rounded float-start"></div>
-        <div class="col-lg-6 col-sm-12">
-          <img src="images/demo.png" alt="" class="img-fluid float-end">
+        <label for="name" class="form-label col-1 col-form-label">Name:</label>
+        <div class="col-11">
+          <input type="text" name="" id="name" class="form-control">
         </div>
       </div>
 
-      <!-- <div class="row gy-2">
-        <div class="col-4" style="background-color: aqua;">content</div>
-        <div class="col-4" style="background-color: green;">content</div>
-        <div class="col-4" style="background-color: blue;">content</div>
-        <div class="col-4" style="background-color: red;">content</div>
-        <div class="col-4" style="background-color: yellow;">content</div>
-        <div class="col-4" style="background-color: black;">content</div>
-      </div> -->
-    </div>
 
 
+    </form>
+  </div>
+  
+  
   
   <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container pt-4">
+
+    <div class="accordion pt-3 pb-3" id="schools">
+
+      <div class="accordion-item">
+
+        <h5 class="accordion-header">
+          <button 
+            class="accordion-button" 
+            type="button"
+            data-bs-toggle="collapse" 
+            data-bs-target="#ict">
+            School Of ICT
+          </button>
+        </h5>
+
+        <div id="ict" class="collapse accordion-collapse" data-bs-parent="schools">
+          <div class="accordion-body">
+            <ol>
+              <li>Computer Science</li>
+              <li>Mass Communication</li>
+              <li>Statistics</li>
+              <li>O T M</li>
+              <li>Library Studies</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="accordion-item">
+        <h5 class="accordion-header">
+          <button 
+            class="accordion-button collapsed" 
+            type="button"
+            data-bs-toggle="collapse" 
+            data-bs-target="#eng">
+            School Of Engineering
+          </button>
+        </h5>
+        <div id="eng" class="accordion-collapse collapse" data-bs-parent="schools">
+          <div class="accordion-body">
+            <ul>
+              <li>Electrical/Electronics</li>
+              <li>Mechanical</li>
+              <li>Chemical</li>
+              <li>Civil</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <ol class="pb-3">
+      <li>Rice</li>
+      <li>Beans</li>
+      <li>Yam</li>
+    </ol>
+
+    <table>
+
+      <thead>
+
+        <tr>
+          <th>S/N</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <td>1</td>
+          <td>Aisha</td>
+          <td>1,000,000</td>
+
+        </tr>
+
+        <tr>
+          
+          <td>2</td>
+          <td>Musa</td>
+          <td>500,000</td>
+
+        </tr>
+
+      </tbody>
+      
+    </table>
+  </div>
+
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
